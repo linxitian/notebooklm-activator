@@ -1,0 +1,17 @@
+{
+  "skill_name": "notebooklm-activator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Please activate the '软件工程' notebook in my NotebookLM account.",
+      "expected_output": "Should match and activate the '软件工程' notebook and print its UUID, sources, and AI summary.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Connect to my NotebookLM and find the notebook about '数据库' so we can use its knowledge.",
+      "expected_output": "Should match and activate the '数据库' notebook, saving it to last_bound_notebook.json.",
+      "files": []
+    }
+  ]
+}
