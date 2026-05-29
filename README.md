@@ -1,17 +1,17 @@
-# NotebookLM Activator & Binder Custom Skill
+# NotebookLM 自动激活与知识绑定自定义 Skill (NotebookLM Activator & Binder)
 
-A powerful, robust, and zero-config custom skill designed for AI assistants and local environments to automatically authenticate, query, search, and bind any NotebookLM notebook from your Google account.
+这是一款为 AI 助手和本地开发环境量身定制的高效、鲁棒、零配置的自定义 Skill。它能够自动进行 Google 身份认证，列出、搜索并一键绑定您 Google 账户下 NotebookLM 中的任意笔记本。
 
-This custom skill lets you instantly bring all your courseware, lecture slides, research materials, and personal notes stored in NotebookLM directly into your AI coding session.
+通过此 Skill，您可以瞬间将保存在 NotebookLM 中的教学课件、演讲幻灯片、学术文献以及个人笔记等海量知识库，直接无缝引入到您的 AI 编码和问答会话中！
 
 ---
 
-## ✨ Features
+## ✨ 核心特性
 
-- **Silent & Quiet Authentication**: Automatically decrypts and extracts required Google session cookies from your default Windows Chrome profile using AES-256-GCM and DPAPI encryption. No manual typing or configuration needed!
-- **Interactive Fallback**: If silent extraction fails, it safely falls back to standard interactive authentication using `notebooklm-mcp-auth`, allowing you to log in in a browser window.
-- **Fuzzy Matching**: Resolves partial, case-insensitive notebook titles to easily activate the notebook you want.
-- **Structured Retrieval**: Retrieves the notebook title, document sources, AI-generated overview, and writes local configurations for seamless reference.
+- **静默免密授权 (DPAPI Decryption)**：自动利用 AES-256-GCM 与 Windows DPAPI 保护机制，静默解密并提取您本地 Chrome 默认配置文件中的 Google 会话 Cookies。无需您进行任何手动的账号密码输入或 Token 配置，安全且极其安静！
+- **交互式登录备用 (Interactive Fallback)**：如果静默提取失败或未登录，会安全地自动降级并唤起 `notebooklm-mcp-auth` 的交互式 Chrome 界面引导您完成登录。
+- **智能模糊匹配 (Fuzzy Matching)**：支持大小写不敏感的笔记本标题关键字检索，让您能以最随性的输入轻松激活心仪的笔记本。
+- **结构化元数据提取**：深度拉取所绑定笔记本的名称、文件源列表（各章节 UUID）、AI 自动生成的摘要等，并输出为标准的本地 JSON 配置文件。
 
 ---
 
@@ -84,7 +84,7 @@ Tokens cached to: C:\Users\Administrator\.notebooklm-mcp\auth.json
 {
   "mcpServers": {
     "notebooklm": {
-      "command": "C:\\Users\\Administrator\\AppData\\Local\\Programs\Python\\Python314\\Scripts\\notebooklm-mcp.exe",
+      "command": "C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python314\\Scripts\\notebooklm-mcp.exe",
       "args": []
     }
   }
